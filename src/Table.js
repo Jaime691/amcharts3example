@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TableItem from './TableItem';
+import './TableStyle.css';
 
 class Table extends Component {
     state = {  }
@@ -7,11 +8,11 @@ class Table extends Component {
     
     render() {
         const { data } = this.props;
-        const { tableStyle, buttonStyle } = styles;
+        const { buttonStyle } = styles;
         const items = data.map(item => <TableItem key={item.country}item={item}/>);
         return (
-            <div>
-                <table style={tableStyle}>
+            <div style={{ margin:"15px 15px 15px 15px "}}>
+                <table>
                     <thead>
                         <tr >
                             <th>Country</th>
@@ -33,6 +34,9 @@ const styles = {
     tableStyle: {
         border: "2px solid black",
         borderRadius: 4
+    },
+    tableCell: {
+        border: "2px solid black",
     },
     buttonStyle: {
         padding: "10px 30px 10px 30px",
