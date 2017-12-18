@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chart from './Chart';
 import Table from './Table';
+import CodePenChart from "./CodePenChart";
 
 // Component which contains the dynamic state for the chart
 class App extends Component {
@@ -50,6 +51,7 @@ class App extends Component {
       <div className="App">
         <Chart data={this.state.data} yMin={yMin} yMax={yMax} />
         <Table data={this.state.data} handleClick={this.handleClick.bind(this)} />
+        <CodePenChart />
 
       </div>
     );
